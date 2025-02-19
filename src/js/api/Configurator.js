@@ -1,5 +1,5 @@
 import _ from "utils/underscore";
-import deepMerge from "utils/deepExtend";
+import deepMerge from "utils/deepMerge";
 
 import {
     CONTENT_TIME_MODE_CHANGED, SYSTEM_TEXT
