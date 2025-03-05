@@ -102,13 +102,20 @@ const HlsProvider = function (element, playerConfig, adTagUrl) {
 
                     let qualityLevel = hls.levels[i];
 
-                    spec.qualityLevels.push({
+                    let qualityLevelItem = {
                         bitrate: qualityLevel.bitrate,
                         height: qualityLevel.height,
                         width: qualityLevel.width,
                         index: i,
                         label: qualityLevel.width + "x" + qualityLevel.height + ", " + sizeHumanizer(qualityLevel.bitrate, true, "bps")
-                    });
+                    };
+
+                    const { renderSettingItem } = playerConfig.getConfig();
+                    if(renderSettingItem) {
+                        qualityLevelItem = renderSettingItem(qualityLevelItem);
+                    }
+
+                    spec.qualityLevels.push(qualityLevelItem);
                 }
 
                 spec.currentQuality = hls.firstLevel;
