@@ -17,7 +17,7 @@ export interface OvenPlayerProps {
   /**
    * Triggered when the player is fully initialized and ready to use its API methods.
    */
-  onReady?: () => void;
+  onReady?: (instance: OvenPlayerInstance) => void;
 
   /**
    * Triggered when new metadata is received.
@@ -204,7 +204,7 @@ const OvenPlayer: React.FC<OvenPlayerProps> = (props) => {
 
     const instance = OvenPlayerLib.create(containerIdRef.current, props.config);
 
-    instance.on("ready", () => props.onReady?.());
+    instance.on("ready", () => props.onReady?.(instance));
     instance.on("metaChanged", (data) => props.onMetaChanged?.(data));
     instance.on("stateChanged", (data) => props.onStateChanged?.(data));
     instance.on("resized", (data) => props.onResized?.(data));

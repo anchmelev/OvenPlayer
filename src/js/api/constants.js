@@ -133,6 +133,7 @@ export const SYSTEM_TEXT = [
         "live": "Live Streaming",
         "low_latency_live": "Sub-Second Latency Streaming",
         "low_latency_p2p": "Sub-Second Latency P2P",
+        "return_to_live": "Return to live"
       },
       "playlist": "Playlist",
       "setting": {
@@ -293,6 +294,7 @@ export const SYSTEM_TEXT = [
         "live": "라이브",
         "low_latency_live": "초저지연 라이브",
         "low_latency_p2p": "초저지연 P2P",
+        "return_to_live": "라이브로 돌아가기"
       },
       "playlist": "플레이리스트",
       "setting": {
@@ -453,6 +455,7 @@ export const SYSTEM_TEXT = [
         "live": "Transmisja na żywo",
         "low_latency_live": "Transmisja z niskim opóźnieniem",
         "low_latency_p2p": "Transmisja z niskim opóźnieniem P2P",
+        "return_to_live": "Wróć do transmisji na żywo"
       },
       "playlist": "Playlista",
       "setting": {

@@ -35,6 +35,11 @@ const TimeDisplay = function ($container, api, data) {
     $liveBadge = $current.find(".op-live-badge");
     $liveText = $current.find(".op-live-text");
 
+    function getUiText() {
+      const config = api.getConfig() || {};
+      return (config.systemText && config.systemText.ui && config.systemText.ui.controls) || {};
+    }
+
     if (data && data.type === PROVIDER_HLS && data.duration === Infinity) {
       hlsLive = true;
 
@@ -70,24 +75,39 @@ const TimeDisplay = function ($container, api, data) {
     } else {
       if (hlsLive && !nativeHlsLive) {
         api.on(CONTENT_TIME, function (data) {
+          const { return_to_live, live } = getUiText();
+
           if (!api.getConfig().legacyUI) {
             if (data.duration - data.position > 3) {
               $liveBadge.addClass('op-live-badge-delayed');
+              if(return_to_live) {
+                $liveText.text(return_to_live);
+              }
             } else {
               $liveBadge.removeClass('op-live-badge-delayed');
+              if(live) {
+                $liveText.text(live);
+              }
             }
           }
         }, template);
       } else if (hlsLive && nativeHlsLive) {
 
         api.on(CONTENT_TIME, function (data) {
+          const { return_to_live, live } = getUiText();
 
           if (!api.getConfig().legacyUI) {
             const dvrWindow = getNativeHlsDvrWindow();
             if (dvrWindow - data.position > 3) {
               $liveBadge.addClass('op-live-badge-delayed');
+              if(return_to_live) {
+                $liveText.text(return_to_live);
+              }
             } else {
               $liveBadge.removeClass('op-live-badge-delayed');
+              if(live) {
+                $liveText.text(live);
+              }
             }
           }
         }, template);

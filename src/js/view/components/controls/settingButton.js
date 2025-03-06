@@ -78,7 +78,7 @@ const SettingButton = function ($container, api) {
             panel.body.push(body);
         }
         if (qualityLevels && qualityLevels.length > 0) {
-
+            const { renderSettingItem } = playerConfig;
             let body = {
                 title: PANEL_TITLE.quality,
                 value: currentQuality ? currentQuality.label : "Default",
@@ -86,6 +86,10 @@ const SettingButton = function ($container, api) {
                 panelType: "quality",
                 hasNext: true
             };
+
+            if(renderSettingItem) {
+                body = renderSettingItem(body);
+            }
 
             panel.body.push(body);
         }

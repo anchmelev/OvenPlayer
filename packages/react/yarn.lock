@@ -1283,9 +1283,9 @@ optionator@^0.9.3:
     type-check "^0.4.0"
     word-wrap "^1.2.5"
 
-"ovenplayer@https://github.com/anchmelev/OvenPlayer/releases/download/ovenplayer-0.10.40/ovenplayer-v0.10.40.tgz":
-  version "0.10.40"
-  resolved "https://github.com/anchmelev/OvenPlayer/releases/download/ovenplayer-0.10.40/ovenplayer-v0.10.40.tgz#0191ab197979ca760601c6620b1d93d705fd7166"
+"ovenplayer@https://github.com/anchmelev/OvenPlayer/releases/download/v0.0.3-react/ovenplayer-v0.11.40.tgz":
+  version "0.11.40"
+  resolved "https://github.com/anchmelev/OvenPlayer/releases/download/v0.0.3-react/ovenplayer-v0.11.40.tgz#0b519e5c46a9ece4dd701ef5aa9b89fce91a2702"
   dependencies:
     core-js "^3.16.3"
     whatwg-fetch "^3.6.2"

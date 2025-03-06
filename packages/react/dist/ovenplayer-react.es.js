@@ -645,7 +645,7 @@ const Er = (n) => {
     const l = vr.create(T.current, n.config);
     l.on("ready", () => {
       var i;
-      return (i = n.onReady) == null ? void 0 : i.call(n);
+      return (i = n.onReady) == null ? void 0 : i.call(n, l);
     }), l.on("metaChanged", (i) => {
       var t;
       return (t = n.onMetaChanged) == null ? void 0 : t.call(n, i);

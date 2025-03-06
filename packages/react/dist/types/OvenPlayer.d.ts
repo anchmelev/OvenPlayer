@@ -1,5 +1,5 @@
 import React from "react";
-import { OvenPlayerConfig, OvenPlayerEvents } from "ovenplayer";
+import { OvenPlayerConfig, OvenPlayerInstance, OvenPlayerEvents } from "ovenplayer";
 /**
  * Props for the OvenPlayerReact component.
  */
@@ -11,7 +11,7 @@ export interface OvenPlayerProps {
     /**
      * Triggered when the player is fully initialized and ready to use its API methods.
      */
-    onReady?: () => void;
+    onReady?: (instance: OvenPlayerInstance) => void;
     /**
      * Triggered when new metadata is received.
      * @param data - `OvenPlayerEvents['metaChanged']`
