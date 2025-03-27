@@ -136,6 +136,9 @@ export const SYSTEM_TEXT = [
         "return_to_live": "Return to live"
       },
       "playlist": "Playlist",
+      "quality": {
+        "auto": "Auto"
+      },
       "setting": {
         "title": "Settings",
         "speed": "Speed",
@@ -297,6 +300,9 @@ export const SYSTEM_TEXT = [
         "return_to_live": "라이브로 돌아가기"
       },
       "playlist": "플레이리스트",
+      "quality": {
+        "auto": "자동"
+      },
       "setting": {
         "title": "설정",
         "speed": "재생 속도",
@@ -458,6 +464,9 @@ export const SYSTEM_TEXT = [
         "return_to_live": "Wróć do transmisji na żywo"
       },
       "playlist": "Playlista",
+      "quality": {
+        "auto": "Auto"
+      },
       "setting": {
         "title": "Ustawienia",
         "speed": "Prędkość",
